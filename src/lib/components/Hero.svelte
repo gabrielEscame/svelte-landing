@@ -1,16 +1,6 @@
 <script>
-  import { gsap } from 'gsap'
   import { onMount } from 'svelte'
-
-  const slideAnimation = (element, configs = {}) => {
-    gsap.from(element, {
-      x: configs?.x || -200,
-      rotate: configs?.rotate || '5deg',
-      opacity: configs?.opacity || 0,
-      duration: configs?.duration || 0.6,
-      delay: configs?.delay || 0
-    })
-  }
+  import { slideAnimation } from '$lib/utils/animation.js'
 
   onMount(() => {
     slideAnimation('.hero__title')

@@ -1,5 +1,5 @@
 <script>
-  import Hero from '../lib/components/Hero.svelte'
+  import Hero from '$lib/components/Hero.svelte'
 </script>
 
 <div class="landing">
@@ -8,9 +8,9 @@
 
 <style lang="scss">
   .landing {
-    background-color: $black;
+    background-color: $dark;
     font-size: 40px;
-    width: 100vw;
-    min-height: 100vh;
+    max-width: 100vw;
+    min-height: 200vh;
   }
 </style>

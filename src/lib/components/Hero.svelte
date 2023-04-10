@@ -1,11 +1,12 @@
 <script>
   import { onMount } from 'svelte'
-  import { slideAnimation } from '$lib/utils/animation.js'
+  import { slideAnimation, scaleAnimation } from '$lib/utils/animation.js'
   import liquidBackground from '$lib/assets/liquid-background.png'
 
   onMount(() => {
-    slideAnimation('.hero__wrapper', { x: 200, rotate: '0deg' })
+    scaleAnimation('.hero__square')
     slideAnimation('.hero__title', { delay: 0.25 })
+    slideAnimation('.hero__wrapper', { x: 200, rotate: '0deg' })
   })
 </script>
 
@@ -23,6 +24,7 @@
       src={liquidBackground}
       alt="liquid art background"
     />
+    <span class="hero__square" />
   </div>
 </section>
 
@@ -42,23 +44,22 @@
       right: 0;
       height: 80%;
       width: 64%;
-
-      &::before {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        content: '';
-        height: 186px;
-        width: 230px;
-        background-color: rgba(17, 154, 218, 0.44);
-        z-index: 1;
-      }
     }
 
     &__background {
       position: relative;
       height: 100%;
       width: 100%;
+    }
+
+    &__square {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 186px;
+      width: 230px;
+      background-color: rgba(17, 154, 218, 0.44);
+      z-index: 1;
     }
 
     &__title {

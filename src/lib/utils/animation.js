@@ -14,7 +14,7 @@ export const scaleAnimation = (element, configs = {}) => {
   gsap.from(element, {
     height: configs?.height || '100%',
     width: configs?.width || '100%',
-    duration: configs?.duration || 0.625,
-    delay: configs?.delay || 0.125
+    duration: configs?.duration || 0.6,
+    delay: configs?.delay || 0
   })
 }

@@ -4,13 +4,13 @@
   import liquidBackground from '$lib/assets/liquid-background.png'
 
   onMount(() => {
-    slideAnimation('.hero__background-wrapper', { x: 200, rotate: '0deg' })
+    slideAnimation('.hero__wrapper', { x: 200, rotate: '0deg' })
     slideAnimation('.hero__title', { delay: 0.25 })
   })
 </script>
 
 <section class="hero">
-  <div class="hero__background-wrapper">
+  <div class="hero__wrapper">
     <h1 class="hero__title">
       <strong>Hi,</strong> <br />
       I'm
@@ -36,7 +36,7 @@
     height: 100vh;
     background-color: $black;
 
-    &__background-wrapper {
+    &__wrapper {
       position: absolute;
       top: 0;
       right: 0;

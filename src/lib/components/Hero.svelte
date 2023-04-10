@@ -40,7 +40,7 @@
       top: 0;
       right: 0;
       height: 80%;
-      width: 56%;
+      width: 64%;
 
       &::before {
         position: absolute;

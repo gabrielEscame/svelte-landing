@@ -4,7 +4,8 @@
   import liquidBackground from '$lib/assets/liquid-background.png'
 
   onMount(() => {
-    slideAnimation('.hero__title')
+    slideAnimation('.hero__background-wrapper', { x: 200, rotate: '0deg' })
+    slideAnimation('.hero__title', { delay: 0.25 })
   })
 </script>
 

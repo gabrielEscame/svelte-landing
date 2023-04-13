@@ -1,6 +1,6 @@
 <script>
   import { onMount } from 'svelte'
-  import { slideAnimation } from '$lib/utils/animation.js'
+  import { slideAnimation } from '$lib/utils/greensockAnimation.js'
 
   onMount(() => {
     slideAnimation('.header__icon', { delay: 0.7 })

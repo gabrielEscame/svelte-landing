@@ -19,11 +19,11 @@
       ><br />
       <strong>Web</strong> developer
     </h1>
-    <img
+    <!-- <img
       class="hero__background"
       src={liquidBackground}
       alt="liquid art background"
-    />
+    /> -->
     <span class="hero__square" />
   </div>
 </section>
@@ -36,7 +36,7 @@
     align-items: center;
     width: 100%;
     height: 100vh;
-    background-color: $black;
+    // background-color: $black;
 
     &__wrapper {
       position: absolute;
@@ -46,11 +46,11 @@
       width: 64%;
     }
 
-    &__background {
-      position: relative;
-      height: 100%;
-      width: 100%;
-    }
+    // &__background {
+    //   position: relative;
+    //   height: 100%;
+    //   width: 100%;
+    // }
 
     &__square {
       position: absolute;

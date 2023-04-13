@@ -1,7 +1,31 @@
 <script>
   import { onMount } from 'svelte'
-  import { slideAnimation, scaleAnimation } from '$lib/utils/animation.js'
-  import liquidBackground from '$lib/assets/liquid-background.png'
+  import {
+    slideAnimation,
+    scaleAnimation
+  } from '$lib/utils/greensockAnimation.js'
+  import {
+    createScene,
+    createMesh,
+    createAppendRenderer,
+    createClock
+  } from '$lib/utils/threeAnimation.js'
+
+  onMount(() => {
+    const { scene, camera } = createScene()
+    const { mesh, material } = createMesh()
+    const { renderer } = createAppendRenderer()
+    scene.add(mesh)
+
+    const { clock } = createClock()
+
+    function animate() {
+      requestAnimationFrame(animate)
+      renderer.render(scene, camera)
+      material.uniforms.uTime.value = clock.getElapsedTime() / 2
+    }
+    animate()
+  })
 
   onMount(() => {
     slideAnimation('.hero__wrapper', { x: 280, rotate: '0deg' })
@@ -19,11 +43,6 @@
       ><br />
       <strong>Web</strong> developer
     </h1>
-    <!-- <img
-      class="hero__background"
-      src={liquidBackground}
-      alt="liquid art background"
-    /> -->
     <span class="hero__square" />
   </div>
 </section>
@@ -36,7 +55,6 @@
     align-items: center;
     width: 100%;
     height: 100vh;
-    // background-color: $black;
 
     &__wrapper {
       position: absolute;

@@ -25,12 +25,11 @@ export const createMesh = () => {
     fragmentShader: document.querySelector('#fragmentShader').textContent,
     uniforms: {
       uTime: { value: 0.0 },
-      uFrequency: { value: 10.0 },
-      uAmplitude: { value: 0.01 },
-      uSpeed: { value: 1.0 },
+      uFrequency: { value: 20.0 },
+      uAmplitude: { value: 0.0 },
+      uSpeed: { value: 5.0 },
       uTexture: { value: new THREE.TextureLoader().load(img) }
-    },
-    // wireframe: true
+    }
   })
   const mesh = new THREE.Mesh(geometry, material)
 

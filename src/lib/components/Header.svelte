@@ -3,8 +3,8 @@
   import { slideAnimation } from '$lib/utils/animation.js'
 
   onMount(() => {
-    slideAnimation('.header__icon', { delay: 0.7 })
-    slideAnimation('.header__button', { delay: 0.7, position: 280 })
+    slideAnimation('.header__icon', { delay: 0.6 })
+    slideAnimation('.header__button', { delay: 0.6, position: 280 })
   })
 </script>
 

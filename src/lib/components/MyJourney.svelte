@@ -1,5 +1,21 @@
 <script>
+  import { onMount } from 'svelte'
+  import { slideAnimation } from '$lib/utils/animation.js'
   import myself from '$lib/assets/myself.png'
+
+  onMount(() => {
+    slideAnimation('.my-journey__title', {
+      axis: 'y',
+      position: 150,
+      scrollTrigger: '.my-journey__title'
+    })
+
+    slideAnimation('.my-journey__content', {
+      axis: 'y',
+      position: 150,
+      scrollTrigger: '.my-journey__content'
+    })
+  })
 </script>
 
 <section class="my-journey">

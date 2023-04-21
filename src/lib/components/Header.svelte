@@ -4,7 +4,7 @@
 
   onMount(() => {
     slideAnimation('.header__icon', { delay: 0.7 })
-    slideAnimation('.header__button', { delay: 0.7, x: 280 })
+    slideAnimation('.header__button', { delay: 0.7, position: 280 })
   })
 </script>
 

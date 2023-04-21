@@ -2,11 +2,12 @@ import { gsap } from 'gsap'
 
 export const slideAnimation = (element, configs = {}) => {
   gsap.from(element, {
-    x: configs?.x || -280,
+    [configs?.axis || 'x']: configs?.position || -280,
     rotate: configs?.rotate || '0deg',
     opacity: configs?.opacity || 0,
     duration: configs?.duration || 0.6,
-    delay: configs?.delay || 0
+    delay: configs?.delay || 0,
+    scrollTrigger: configs?.scrollTrigger || ''
   })
 }
 

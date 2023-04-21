@@ -21,7 +21,7 @@
     min-height: 200vh;
 
     &__container {
-      max-width: 60%;
+      max-width: 800px;
       margin: auto;
       padding: 0 24px;
     }
